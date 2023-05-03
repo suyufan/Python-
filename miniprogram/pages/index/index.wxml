@@ -1,75 +1,34 @@
-<!--pages/index/index.wxml-->
+<view class="container">
 
-<view bindtap="clickMe" data-nid="123" data-name="SD" >点我跳转</view>
+  <view class="category">
+    <view class="item" wx:for="{{menuList}}" wx:key="text">
+      <image src="{{item.img}}"></image>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
 
-<navigator url="/pages/redirect/redirect?id=666">跳转到新页面</navigator>
+  <view class="falls">
+    <view class="item" wx:for="{{newsList}}" wx:key="id">
+      <view class="pic">
+        <navigator url="/pages/newsDetail/newsDetail?newsId={{item.id}}"><image class="img" src="{{item.cover}}" mode="widthFix"></image></navigator>
+        <view class="user">
+          <view class="author">
+            <image class="avatar" src="{{item.user.avatar}}"></image>
+            <view>{{item.user.nickname}}</view>
+          </view>
+          <view class="favor">
+            <image class="icon" src="/static/images/icon/likes_smallicon_nor.png"></image>
+            <view>{{item.favor_count}}</view>
+          </view>
+        </view>
+      </view>
 
-<view>示例一</view>
-<view class="menu-1">
-  <image src="/static/hg.jpg"></image>
-  <image src="/static/hg.jpg"></image>
-  <image src="/static/hg.jpg"></image>
-  <image src="/static/hg.jpg"></image>
+      <view class="title">
+        <text>{{item.content}}</text>
+        <text class="tag" wx:if="{{item.topic.title}}"># {{item.topic.title}}</text>
+      </view>
+    </view>
+  </view>
+
+
 </view>
-
-<view>示例二</view>
-
-<view class="menu-2">
-  <view class="item">
-    <image src="/static/hg.jpg"></image>
-    <text>精品</text>
-  </view>
-   <view class="item">
-    <image src="/static/hg.jpg"></image>
-    <text>精品</text>
-  </view>
-   <view class="item">
-    <image src="/static/hg.jpg"></image>
-    <text>精品</text>
-  </view>
-   <view class="item">
-    <image src="/static/hg.jpg"></image>
-    <text>精品</text>
-  </view>
-</view>
-
-<view>示例三</view>
-<view class="auction">
-  <view class="item">
-    <view class="title">第一场 拍卖龚名扬吃的东西</view>
-    <view class="tips">
-      <view class="status">2020-01-01</view>
-      <view class="count">111次围观</view>
-    </view>
-      
-    <view class="big">
-      <image src="/static/hg.jpg"></image>
-    </view>
-    <view class="small">
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-    </view>
-  </view>
-
-  <view class="item">
-    <view class="title">第一场 拍卖龚名扬吃的东西</view>
-    <view class="tips">
-      <view class="status">2020-01-01</view>
-      <view class="count">111次围观</view>
-    </view>
-      
-    <view class="big">
-      <image src="/static/hg.jpg"></image>
-    </view>
-    <view class="small">
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-      <image src="/static/hg.jpg"></image>
-    </view>
-  </view>
-</view>
-
-

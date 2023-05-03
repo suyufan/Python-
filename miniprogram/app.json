@@ -3,14 +3,20 @@
     "pages/index/index",
     "pages/auth/auth",
     "pages/home/home",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/pub/pub",
+    "pages/topic/topic",
+    "pages/publish/publish",
+    "pages/message/message",
+    "pages/auction/auction"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
@@ -20,14 +26,32 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "static/tabbar/ic_menu_choice_nor.png",
-        "selectedIconPath": "static/tabbar/ic_menu_choice_pressed.png"
+        "iconPath": "static/images/tabbar/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/tabbar/ic_menu_choice_pressed.png"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "text": "拍卖",
+        "iconPath": "static/images/tabbar/ic_menu_topic_nor.png",
+        "selectedIconPath": "static/images/tabbar/ic_menu_topic_pressed.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "static/images/tabbar/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/images/tabbar/ic_menu_sort_pressed.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/images/tabbar/ic_menu_shopping_nor.png",
+        "selectedIconPath": "static/images/tabbar/ic_menu_shopping_pressed.png"
       },
       {
         "pagePath": "pages/home/home",
         "text": "我的",
-        "iconPath": "static/tabbar/ic_menu_me_nor.png",
-        "selectedIconPath": "static/tabbar/ic_menu_me_pressed.png"
+        "iconPath": "static/images/tabbar/ic_menu_me_nor.png",
+        "selectedIconPath": "static/images/tabbar/ic_menu_me_pressed.png"
       }
     ]
   }
