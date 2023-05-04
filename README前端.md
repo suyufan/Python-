@@ -240,3 +240,17 @@ wx.showToast({
 
     
 
+### 5.发送请求
+
+`http://localhost/api/comment/?root=12`
+
+```js
+wx.request({
+    url: '`http://localhost/api/comment/',
+    data: {
+        root: rootId
+    },
+    method: 'GET'
+})
+```
+
